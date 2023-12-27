@@ -12,7 +12,7 @@ public interface IRobot
 {
     string GetInfo();
     static List<string>? GetComponents;
-    static string GetRobotType { get => "I am a simple robot."; }
+    string GetRobotType { get => "I am a simple robot."; }
 }
 interface IChargeable
 {
@@ -22,7 +22,7 @@ interface IChargeable
 
 interface IFlyingRobot : IRobot
 {
-    static string GetRobotType => "I am a flying robot.";
+     string GetRobotType => "I am a flying robot.";
 }
 
 public class Quadrocopter : IFlyingRobot, IChargeable
