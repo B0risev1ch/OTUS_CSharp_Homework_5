@@ -11,7 +11,7 @@ quadrocopter.Charge();
 public interface IRobot
 {
     string GetInfo();
-    static List<string>? GetComponents;
+    List<string>? GetComponents { get; }
     string GetRobotType { get => "I am a simple robot."; }
 }
 interface IChargeable
@@ -22,7 +22,7 @@ interface IChargeable
 
 interface IFlyingRobot : IRobot
 {
-     string GetRobotType => "I am a flying robot.";
+     new static string GetRobotType => "I am a flying robot.";
 }
 
 public class Quadrocopter : IFlyingRobot, IChargeable
